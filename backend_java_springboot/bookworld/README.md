@@ -1,7 +1,3 @@
-# book_app_sample
- 
-Parts: backend, frontend
-
 # 📚 BookWorld (fragmento de backend - Java Spring Boot)
 
 Este repositorio muestra parte del backend de **BookWorld** (nombre provisional), una aplicación web de valoración de libros con funcionalidades sociales. La finalidad de este código es **mostrar cómo trabajo con Java, Spring Boot, JPA y el diseño de APIs REST limpias y bien estructuradas.**
