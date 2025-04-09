@@ -1,0 +1,156 @@
+
+.results{
+    max-width: 90%;
+    margin: auto;
+    
+}
+.single-book-result{
+    margin: 20px auto;
+    background: linear-gradient(#1d1d1f, #1a92cdc4);
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: azure;
+    display: grid;
+    grid-template-columns: 10% 10% 80%;
+}
+.single-book-result:hover{
+    transform: scale(1.02);
+}
+img{
+  height: 100%;
+  border-radius: 10px;
+  
+}
+img:hover{
+    transform: scale(1.02);
+}
+
+.res-left{
+    margin: 2%;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+}
+
+.res-middle{
+  margin: 2%;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;    /* Centrar verticalmente */
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+
+
+.res-right{
+    
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.res-right-sub{
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+}
+
+mat-icon.filled, mat-icon.empty{
+  color:white;
+  font-size: 70px;
+}
+
+mat-icon{
+  width: 100%;
+  height: 100%;
+}
+
+
+.title_author_res{
+  margin-bottom: 10px;
+}
+.genders_res, .description_res{
+  margin-top: 8px;
+}
+
+::ng-deep .more_less_buttons{
+  width: 70px !important;
+  height: 25px !important;
+  min-width: 0px !important;      /* Sobrescribir min-width */
+  min-height: 0px !important;     /* Sobrescribir min-height */
+  /*font-size: 12px !important;  */   /* Reducir el tamaño del texto */
+  
+  color: #0d587bc4 !important;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+::ng-deep .res_buttons{
+  color: #0d587bc4 !important;
+  
+  height: 40px !important;
+  min-width: 0px !important;      /* Sobrescribir min-width */
+  min-height: 0px !important;     /* Sobrescribir min-height */
+}
+
+.gotoarrow{
+  color: #0dac18;;
+}
+.read{
+  color: #0dac18;
+}
+
+.fav{
+  color: red;
+}
+
+.notfav{
+  color: grey;
+}
+
+.bookmarks{
+  color:chocolate;
+}
+
+.affiliate_logo{
+  height: 50px;
+  width: 50px;
+}
+
+.buy_invitation{
+  color:#15dd30;
+}
+/* Estilo del botón */
+.moreButtons {
+    background-color:  #dda50b; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno (padding) */
+    font-size: 12px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para cambios de color y transformación */
+  }
+
+  /* Estilo del botón en estado hover */
+  #btn_buscar:hover {
+    background-color: #0dac18; /* Color de fondo del botón al pasar el ratón sobre él */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+  }
+
+  /* Estilo del botón en estado active (cuando se hace clic) */
+  #btn_buscar:active {
+    background-color: #15dd30; /* Color de fondo del botón al hacer clic */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño del botón */
+  }
+
+  a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Usa el color del elemento padre */
+  }
+
+  a:hover {
+    text-decoration: underline; /* Añade el subrayado al pasar el ratón */
+  }
+

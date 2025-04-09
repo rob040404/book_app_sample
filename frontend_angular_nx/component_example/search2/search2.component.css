@@ -1,0 +1,50 @@
+
+.results{
+    max-width: 90%;
+    margin: auto;
+    
+}
+.single-book-result{
+    margin: 20px auto;
+    background: linear-gradient(#1d1d1f, #1a92cdc4);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: azure;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.res-left{
+    margin: auto;
+}
+
+.res-right{
+    margin: 5px;
+}
+
+/* Estilo del botón */
+.moreButtons {
+    background-color:  #dda50b; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno (padding) */
+    font-size: 12px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para cambios de color y transformación */
+  }
+
+  /* Estilo del botón en estado hover */
+  #btn_buscar:hover {
+    background-color: #0dac18; /* Color de fondo del botón al pasar el ratón sobre él */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+  }
+
+  /* Estilo del botón en estado active (cuando se hace clic) */
+  #btn_buscar:active {
+    background-color: #15dd30; /* Color de fondo del botón al hacer clic */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño del botón */
+  }
+

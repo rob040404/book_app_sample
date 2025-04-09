@@ -1,0 +1,77 @@
+<div *ngIf="books_info.length>0" class="results">
+    <div class="single-book-result" *ngFor="let book of books_info | slice:0:10">
+        <div class="res-left">  
+            <a [routerLink]="['/explore-books/book-sheet', book.id]"><img src="{{book.image}}" alt="Imagen del libro"></a>  
+        </div>
+
+        <div class="res-middle">
+            <div>
+                <mat-icon *ngIf="book.numVotes>0; else emptyStar" class="filled">star</mat-icon>
+                <ng-template #emptyStar>
+                    <mat-icon class="empty">star_border</mat-icon>
+                </ng-template>
+            </div>
+            <div *ngIf="book.rating">
+                <h2>{{book.rating}}</h2>
+            </div>
+            <div> 
+                <i *ngIf="book.numVotes>0; else noVotes">{{book.numVotes}} votos</i>
+                <ng-template #noVotes>
+                    <i>Sé el primero en votar</i>
+                </ng-template>
+            </div>
+        </div>
+        
+        <div class="res-right">
+            <div class="res-right-sub">
+                <div class="title_author_res">
+                    <a [routerLink]="['/explore-books/book-sheet', book.id]"><span style="font-size: 30px;"><b><i>{{book.title}}</i></b></span></a>
+                    <br>
+                    <span style="font-size: 25px;"><i>de {{book.authors}}</i></span>    
+                </div>
+                <div class="buttons_res">
+                    <a [routerLink]="['/explore-books/book-sheet', book.id]"><button mat-raised-button class="res_buttons"><mat-icon class="gotoarrow"><b>arrow_forward</b></mat-icon><b>Ir a ficha</b></button></a>
+                    <button mat-raised-button class="res_buttons">
+                        <mat-icon class="read"><b>check</b></mat-icon><b>Leído</b> <!--Make it x if is not read by the user yet-->
+                    </button>
+                    <button mat-raised-button class="res_buttons">
+                        <mat-icon class="notfav"><b>favorite_border</b></mat-icon><b>Favoritos</b> <!--Make it full if is already read by the user-->
+                    </button>
+                    <button mat-raised-button class="res_buttons">
+                        <mat-icon class="bookmarks"><b>bookmarks</b></mat-icon><b>Añadir a lista</b> <!--Make it x if is not read by the user yet-->
+                    </button>
+                </div>
+                <div class="links_res">
+                   
+                    <a  href="https://www.casadellibro.com/?gad_source=1&gclid=Cj0KCQiA4L67BhDUARIsADWrl7Fu6GMDcx2lyv9e3Xq_gbCzmX1Gtfz8SYez66mmbJFqFxyQjSYqzN0aAnyCEALw_wcB&query={{book.title}}" target="_blank">
+                        <img class="affiliate_logo" src="assets/common-assets/images/casa_de_libro_white.jpeg" alt="Casas del Libro">
+                    </a>  &nbsp;
+                    <a href="https://www.amazon.es/s?k={{book.title}}&i=stripbooks&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2KJMTJX36Y1WY&sprefix={{book.title}}%2Cstripbooks%2C132&ref=nb_sb_noss_1" target="_blank">
+                        <img class="affiliate_logo" src="assets/common-assets/images/amazon_logo.jpg" alt="Amazon">
+                    </a>  &nbsp;
+                    <a href="https://www.fnac.es/SearchResult/ResultList.aspx?Search={{book.title}}&sft=1&sa=1" target="_blank">
+                        <img class="affiliate_logo" src="assets/common-assets/images/fnac.jpg" alt="FNAC">
+                    </a> 
+                    <br>
+                    <span class="buy_invitation"><i><b>Compra este libro</b></i></span>  
+                </div>
+            </div>
+
+           
+           <div class="genders_res">
+                <i><strong>Géneros: </strong>{{book.genders}}</i>
+            </div>
+            <div class="description_res" id="{{book.id}}" *ngIf="book.description">
+                
+                    <i><strong>Descripción: </strong></i>
+                    <span *ngIf="!book.showFullDescription">{{book.description | truncate:maxWords }}</span>
+                    <span *ngIf="book.showFullDescription">{{ book.description }}</span>
+
+                    <span *ngIf="descriptionWordsNumber(book)>40">
+                        &nbsp;<button mat-raised-button class="more_less_buttons"  id="lengthDescriptionButton" (click)="descriptionLength(book)"><b><i>{{book.showFullDescription ? 'Ménos' : 'Más'}}</i></b></button>
+                    </span>  
+            </div>    
+        </div>
+    </div>
+</div>
+

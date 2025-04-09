@@ -1,0 +1,26 @@
+<form action="" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+
+        <div class="form-title">
+            <h1>Encuentra tu libro</h1>    
+        </div>
+
+        <div class="subcont-up">
+            <div id="encuentra_libro" class="cont-left">
+                <label for="title">Título:</label> 
+                <input type="text" name="title" id="title" [formControl]="titleInput">
+            </div>
+            <div id="encuentra_autor" class="cont-right">
+                <label for="author">Autor:</label> 
+                <input type="text" name="author" id="author" [formControl]="authorInput">
+            </div>
+        </div>
+        
+        <div class="cont-submit-but">
+            <button type="submit" id="btn_buscar">Buscar</button>
+        </div>
+    </div>
+</form>
+
+<lib-results2 [books_info]="books"></lib-results2>
+
