@@ -1,62 +1,58 @@
-# book_app_sample
- 
-Parts: backend, frontend
+# BookWorld
 
-# 📚 BookWorld (fragmento de backend - Java Spring Boot)
+**BookWorld** es una aplicación web que combina funcionalidades de red social y plataforma de valoración de libros. Los usuarios pueden valorar libros, crear listas de lectura personalizadas, explorar publicaciones de otros usuarios y disfrutar de una experiencia interactiva en la comunidad lectora. Esta aplicación está desarrollada utilizando **Spring Boot** en el backend y **Angular** en el frontend, con MySQL como base de datos.
 
-Este repositorio muestra parte del backend de **BookWorld** (nombre provisional), una aplicación web de valoración de libros con funcionalidades sociales. La finalidad de este código es **mostrar cómo trabajo con Java, Spring Boot, JPA y el diseño de APIs REST limpias y bien estructuradas.**
+## Características Principales
 
----
+- **Autenticación y Registro de Usuarios**: Los usuarios pueden crear cuentas, iniciar sesión y gestionar su perfil personal.
+- **Valoración de Libros**: Los usuarios pueden calificar libros y compartir sus opiniones.
+- **Listas de Lectura**: Los usuarios pueden crear listas personalizadas de libros, como "Favoritos", "Must Read", etc.
+- **Exploración de Libros**: Los usuarios pueden explorar una amplia variedad de libros, ver detalles, y valorar libros.
+- **Interacción Social**: Los usuarios pueden ver publicaciones de otros, compartir comentarios y participar en la comunidad de lectores.
 
-## 🚀 Tecnologías utilizadas
+## Tecnologías Utilizadas
 
-- Java 17
-- Spring Boot 3
-- Spring Data JPA
-- Lombok
-- ModelMapper
-- MySQL
-- Maven
+- **Backend**:  
+  - **Spring Boot** (Java)  
+  - **Spring Security** para autenticación y autorización  
+  - **JPA / Hibernate** para el manejo de la base de datos  
+  - **JWT** para autenticación basada en tokens  
+  - **MySQL** como base de datos
 
----
+- **Frontend**:  
+  - **Angular**  
+  - **Angular Material** para componentes de interfaz de usuario  
+  - **Nx Workspace** para gestionar múltiples aplicaciones y bibliotecas
 
-## 📦 ¿Qué contiene este repositorio?
+- **Desarrollo y Despliegue**:  
+  - **Docker** para contenerización del proyecto  
+  - **Spring Boot DevTools** para una experiencia de desarrollo optimizada  
+  - **ModelMapper** para mapear entidades del backend a DTOs (Data Transfer Objects)
 
-Este fragmento de código incluye:
+## Estructura del Proyecto
 
-- Un modelo de entidad JPA para libros (`Libro`)
-- Un endpoint de búsqueda de libros con JPA
-- Configuración CORS personalizada (parte de ella)
-- Un sistema global de manejo de errores con `@RestControllerAdvice` y clases personalizadas (`ApiError`, `GlobalControllerAdvice`)
+### Backend (Spring Boot)
 
----
+- `src/main/java/com/bookworld`  
+  - **config**: Archivos de configuración de la aplicación (CORS, seguridad, etc.)  
+  - **controller**: Controladores que manejan las peticiones HTTP  
+  - **model**: Entidades JPA para interactuar con la base de datos  
+  - **repository**: Repositorios de Spring Data JPA para acceder a la base de datos  
+  - **service**: Servicios que contienen la lógica de negocio  
+  - **errorconfig**: Manejo global de errores y excepciones
 
-## 🧠 ¿Por qué este fragmento?
+- `src/main/resources`  
+  - **application.properties**: Configuración de la aplicación, incluyendo la base de datos
 
-La intención es **mostrar parte del backend real de una aplicación más grande** sin comprometer la seguridad ni mostrar lógica sensible.
+### Frontend (Angular)
 
----
+- `src/app`  
+  - **components**: Componentes principales de la aplicación (Home, Login, Register, etc.)  
+  - **services**: Servicios para interactuar con el backend (autenticación, libros, usuarios, etc.)  
+  - **models**: Clases de modelos y DTOs para la transferencia de datos  
+  - **guards**: Guards para proteger las rutas privadas  
+  - **store**: Estado de la aplicación (si utilizas NgRx o algo similar)
 
-## 🔐 ¿Qué no incluye y por qué?
+## Licencia
 
-Por motivos de seguridad, **no se incluye la parte completa de usuarios ni la configuración de autenticación con Spring Security** (gestión de contraseñas, tokens JWT, etc.).
-
-Sin embargo, la aplicación completa implementa:
-
-- Registro y login con validación de credenciales
-- Cifrado de contraseñas con BCrypt
-- Autenticación basada en JWT
-- Control de acceso por roles
-
----
-
-## 🧪 Ejemplo de respuesta ante error
-
-Gracias al sistema global de manejo de errores, el backend devuelve respuestas claras como:
-
-```json
-{
-  "status": "BAD_REQUEST",
-  "date": "09/04/2025 15:34:02",
-  "message": "Los parámetros de búsqueda son inválidos"
-}
+Este proyecto está bajo la **Licencia MIT**.
