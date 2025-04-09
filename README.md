@@ -2,6 +2,11 @@
 
 **BookWorld** es una aplicación web que combina funcionalidades de red social y plataforma de valoración de libros. Los usuarios pueden valorar libros, crear listas de lectura personalizadas, explorar publicaciones de otros usuarios y disfrutar de una experiencia interactiva en la comunidad lectora. Esta aplicación está desarrollada utilizando **Spring Boot** en el backend y **Angular** en el frontend, con MySQL como base de datos.
 
+## Licencia
+
+Este proyecto está **bajo todos los derechos reservados**. No se permite el uso, modificación, distribución ni reproducción del código ni de la aplicación sin el permiso explícito del propietario.
+
+
 ## Características Principales
 
 - **Autenticación y Registro de Usuarios**: Los usuarios pueden crear cuentas, iniciar sesión y gestionar su perfil personal.
