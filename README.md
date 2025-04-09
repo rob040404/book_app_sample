@@ -1,13 +1,10 @@
 # book_app_sample
-This code is a sample of my work in this project. It is not the final product or a complete version of the application.
+ 
+Parts: backend, frontend
 
-Parts:
+# 📚 BookWorld (fragmento de backend - Java Spring Boot)
 
-1. Backend with Java SpringBoot and MySQL
-
-# 📚 BookWorld (fragmento de backend - Spring Boot)
-
-Este repositorio muestra parte del backend de **BookWorld**, una aplicación web de valoración de libros con funcionalidades sociales. La finalidad de este código es **mostrar cómo trabajo con Java, Spring Boot, JPA y el diseño de APIs REST limpias y bien estructuradas.**
+Este repositorio muestra parte del backend de **BookWorld** (nombre provisional), una aplicación web de valoración de libros con funcionalidades sociales. La finalidad de este código es **mostrar cómo trabajo con Java, Spring Boot, JPA y el diseño de APIs REST limpias y bien estructuradas.**
 
 ---
 
