@@ -58,6 +58,3 @@ Este proyecto está **bajo todos los derechos reservados**. No se permite el uso
   - **guards**: Guards para proteger las rutas privadas  
   - **store**: Estado de la aplicación (si utilizas NgRx o algo similar)
 
-## Licencia
-
-Este proyecto está bajo la **Licencia MIT**.
