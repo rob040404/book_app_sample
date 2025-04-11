@@ -56,5 +56,5 @@ Este proyecto está **bajo todos los derechos reservados**. No se permite el uso
   - **services**: Servicios para interactuar con el backend (autenticación, libros, usuarios, etc.)  
   - **models**: Clases de modelos y DTOs para la transferencia de datos  
   - **guards**: Guards para proteger las rutas privadas  
-  - **store**: Estado de la aplicación (si utilizas NgRx o algo similar)
+  - **store**: Estado de la aplicación 
 
